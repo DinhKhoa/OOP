@@ -7,9 +7,9 @@ namespace OOP
     {
         public static void Main(string[] args)
         {
-            BookClass n = new BookClass("DAD", 4);
-            BookClass m = new BookClass("DADAD");
-            BookClass h = new BookClass(13);
+            Book n = new Book("DAD", 4);
+            Book m = new Book("DADAD");
+            Book h = new Book(13);
 
             //n.TenSach = Console.ReadLine();
             //n.TacGia = Console.ReadLine();
@@ -35,7 +35,7 @@ namespace OOP
             List<int> List = new List<int>() { };
             //Implicit Explicit
         }
-        public static void PrintBook(BookClass book)
+        public static void PrintBook(Book book)
         {
             Console.WriteLine($"\nTen sach: {book.TenSach}\nTac gia: {book.TacGia}\nNam xuat ban: {book.NamXB}\nSo luong: {book.SoLuong}");
         }

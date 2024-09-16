@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    public class BookClass
+    public class Book
     {
         public string TenSach { get; set; }
         public string TacGia { get; set; }
         public int NamXB { get; set; }
         public int SoLuong { get; set; }
 
-        public BookClass()
+        public Book()
         {
             SoLuong = 1;
         }
-        public BookClass(int soLuong)
+        public Book(int soLuong)
         {
             SoLuong = soLuong;
         }
-        public BookClass(string tenSach)
+        public Book(string tenSach)
         {
             TenSach = tenSach;
         }
-        public BookClass(string tenSach, int soLuong)
+        public Book(string tenSach, int soLuong)
         {
             TenSach = tenSach;
             SoLuong = soLuong;
@@ -43,7 +43,7 @@ namespace OOP
             Console.WriteLine($"\nTen sach: {TenSach}\nTac gia: {TacGia}\nNam xuat ban: {NamXB}\nSo luong: {SoLuong}");
         }
 
-        ~BookClass()
+        ~Book()
         {
             Console.WriteLine("Du lieu da duoc xoa.");
         }
