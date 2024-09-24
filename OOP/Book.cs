@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace CSharpInClass
 {
     public class Book
     {
@@ -15,37 +15,41 @@ namespace OOP
 
         public Book()
         {
-            SoLuong = 1;
+            TenSach = "Chua co";
+            TacGia = "Chua co";
+            NamXB = 0;
+            SoLuong = 0;
         }
-        public Book(int soLuong)
-        {
-            SoLuong = soLuong;
-        }
-        public Book(string tenSach)
-        {
-            TenSach = tenSach;
-        }
-        public Book(string tenSach, int soLuong)
+        public Book(string tenSach, string tacGia, int namXB, int soLuong)
         {
             TenSach = tenSach;
+            TacGia = tacGia;
+            NamXB = namXB;
             SoLuong = soLuong;
         }
 
         public void Read()
         {
+            Console.Write("Nhap ten sach: ");
             TenSach = Console.ReadLine();
+
+            Console.Write("Nhap ten tac gia: ");
             TacGia = Console.ReadLine();
+
+            Console.Write("Nhap nam xuat ban: ");
             NamXB = int.Parse(Console.ReadLine());
+
+            Console.Write("Nhap so luong sach: ");
             SoLuong = int.Parse(Console.ReadLine());
         }
         public void WriteDetails()
         {
-            Console.WriteLine($"\nTen sach: {TenSach}\nTac gia: {TacGia}\nNam xuat ban: {NamXB}\nSo luong: {SoLuong}");
+            Console.WriteLine($"\nCuon \"{TenSach}\" - tac gia {TacGia} (xuat ban nam {NamXB}), So luong sach: {SoLuong} cuon.");
         }
 
         ~Book()
         {
-            Console.WriteLine("Du lieu da duoc xoa.");
+            Console.WriteLine("~~~~END~~~~");
         }
     }
 }
